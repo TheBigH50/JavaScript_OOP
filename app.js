@@ -19,21 +19,28 @@ class Person {
   removeHobby(hobby) {
     return this.hobbies - hobby;
   }
-  greeting(greet) {
-    console.log(`${greet} fellow person`);
+  greeting() {
+    console.log(`Hello fellow person ${this.name}`);
   }
 }
 
 //Exe2
 
 class Coder extends Person {
-    constructor(name, pets, residence, hobbies) {
-        super(name, pets, residence, hobbies)
-        this.occupation = "Full Stack Web Developer"
-    }
-    greeting(greet) {
-        console.log(`${greet} fellow coder`);
-    }
+  constructor(name, pets, residence, hobbies) {
+    super(name, pets, residence, hobbies);
+    this.occupation = "Full Stack Web Developer";
+  }
+  greeting() {
+    console.log(`Hello fellow coder ${this.name}`);
+  }
 }
 
-//Exe2
+//Exe3
+
+let Harrison = new Person("Harrison", 0, "Saint Joseph MN", "Lawn Care");
+let coderHarrison = new Coder("coderHarrison", 0, "Saint Joseph MN", "Digital Lawn Care");
+
+Harrison.greeting();
+coderHarrison.greeting();
+console.log(Harrison, coderHarrison)
