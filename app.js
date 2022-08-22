@@ -6,18 +6,18 @@ console.log("EXERCISE 1:\n==========\n");
 //Exe1
 
 class Person {
-  constructor(name, pets, residence, hobbies) {
+  constructor(name = "Stranger", pets = 0, residence = "Nowhere", hobbies = []) {
     this.name = name;
     this.pets = pets;
     this.residence = residence;
     this.hobbies = hobbies;
   }
 
-  addHobby(hobby) {
-    return this.hobbies + hobby;
+  addHobby(newHobby) {
+    this.hobbies.push(newHobby);
   }
-  removeHobby(hobby) {
-    return this.hobbies - hobby;
+  removeHobby(oldHobby) {
+    this.hobbies = this.hobbies.filter((hobby) => hobby != oldHobby);
   }
   greeting(greet) {
     console.log(`${greet} fellow person ${this.name}`);
@@ -38,16 +38,18 @@ class Coder extends Person {
 
 //Exe3
 
-let Harrison = new Person("Harrison", 0, "Saint Joseph MN", "Lawn Care");
+let Harrison = new Person("Harrison", 0, "Saint Joseph MN", ["Lawn Care",]);
 let coderHarrison = new Coder(
   "coderHarrison",
   0,
   "Saint Joseph MN",
-  "Digital Lawn Care"
+  ["Digital Lawn Care",]
 );
 
 Harrison.greeting("Bonjour");
 coderHarrison.greeting("Beep Boop");
+Harrison.addHobby("Bowling");
+coderHarrison.addHobby("Digital Bowling")
 console.log(Harrison, coderHarrison);
 
 //Exe4
@@ -89,5 +91,6 @@ class Calculator {
   }
 }
 
-let results = new Calculator(0);
-results.printAnswer((results.add(2, 2)));
+let results = new Calculator(0)
+results.printAnswer((results.multiply(2, 3)));
+
