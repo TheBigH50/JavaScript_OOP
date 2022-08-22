@@ -19,8 +19,8 @@ class Person {
   removeHobby(hobby) {
     return this.hobbies - hobby;
   }
-  greeting() {
-    console.log(`Hello fellow person ${this.name}`);
+  greeting(greet) {
+    console.log(`${greet} fellow person ${this.name}`);
   }
 }
 
@@ -31,8 +31,8 @@ class Coder extends Person {
     super(name, pets, residence, hobbies);
     this.occupation = "Full Stack Web Developer";
   }
-  greeting() {
-    console.log(`Hello fellow coder ${this.name}`);
+  greeting(greet) {
+    console.log(`${greet} fellow coder ${this.name}`);
   }
 }
 
@@ -41,6 +41,7 @@ class Coder extends Person {
 let Harrison = new Person("Harrison", 0, "Saint Joseph MN", "Lawn Care");
 let coderHarrison = new Coder("coderHarrison", 0, "Saint Joseph MN", "Digital Lawn Care");
 
-Harrison.greeting();
-coderHarrison.greeting();
-console.log(Harrison, coderHarrison)
+Harrison.greeting("Bonjour");
+coderHarrison.greeting("Beep Boop");
+console.log(Harrison, coderHarrison);
+
