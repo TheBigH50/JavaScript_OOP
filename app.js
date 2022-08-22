@@ -39,9 +39,55 @@ class Coder extends Person {
 //Exe3
 
 let Harrison = new Person("Harrison", 0, "Saint Joseph MN", "Lawn Care");
-let coderHarrison = new Coder("coderHarrison", 0, "Saint Joseph MN", "Digital Lawn Care");
+let coderHarrison = new Coder(
+  "coderHarrison",
+  0,
+  "Saint Joseph MN",
+  "Digital Lawn Care"
+);
 
 Harrison.greeting("Bonjour");
 coderHarrison.greeting("Beep Boop");
 console.log(Harrison, coderHarrison);
 
+//Exe4
+
+class Calculator {
+  constructor(result) {
+    this.result = result;
+  }
+  add(a, b) {
+    if (a != undefined && b != undefined) {
+      return (this.result = a + b);
+    } else {
+      return this.result;
+    }
+  }
+  subtract(a, b) {
+    if (a != undefined && b != undefined) {
+      return (this.result = a - b);
+    } else {
+      return this.result;
+    }
+  }
+  multiply(a, b) {
+    if (a != undefined && b != undefined) {
+      return (this.result = a * b);
+    } else {
+      return this.result;
+    }
+  }
+  divide(a, b) {
+    if (a != undefined && b != undefined) {
+      return (this.result = a / b);
+    } else {
+      return this.result;
+    }
+  }
+  printAnswer() {
+    return console.log(`${this.result}`);
+  }
+}
+
+let results = new Calculator(0);
+results.printAnswer((results.add(2, 2)));
