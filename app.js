@@ -58,7 +58,6 @@ class Calculator {
   constructor(result) {
     this.result = result;
     }
-  }
   add(a, b) {
     if (a != undefined && b != undefined) {
       return (this.result = a + b);
