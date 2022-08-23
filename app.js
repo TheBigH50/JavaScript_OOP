@@ -92,8 +92,8 @@ class Calculator {
 }
 
 let results = new Calculator(0)
-let input1 = parseInt(prompt("Enter Value One"));
-let input2 = parseInt(prompt("Enter Value Two"));
+let input1 = parseFloat(prompt("Enter Value One"));
+let input2 = parseFloat(prompt("Enter Value Two"));
 results.printAnswer((results.add(input1, input2)));
 
 
