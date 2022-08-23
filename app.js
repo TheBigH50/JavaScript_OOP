@@ -57,6 +57,7 @@ console.log(Harrison, coderHarrison);
 class Calculator {
   constructor(result) {
     this.result = result;
+    }
   }
   add(a, b) {
     if (a != undefined && b != undefined) {
@@ -92,5 +93,8 @@ class Calculator {
 }
 
 let results = new Calculator(0)
-results.printAnswer((results.multiply(2, 3)));
+let input1 = parseInt(prompt("Enter Value One"));
+let input2 = parseInt(prompt("Enter Value Two"));
+results.printAnswer((results.add(input1, input2)));
+
 
